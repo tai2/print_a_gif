@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>GIF Flip Book Maker</title>
+        <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+        <link href="bootstrap.min.css" rel="stylesheet">
+        <link href="print_a_gif.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div id="unprintable_area" class="hidden-print center-block">
+                <h1 class="text-center">GIF Flip Book Maker</h1>
+
+                <div id="message">
+                    <p id="description">
+                        <strong>Drag and drop</strong> an animated gif file into<br/> any area of this window.
+                    </p>
+                    <p id="succeeded" style="display:none;">
+                        <strong>All set! Let's print!</strong>
+                    </p>
+                </div>
+
+                <label for="column_num">Columns:</label> <input id="column_num" name="column_num" class="preference" type="text" value="4" />
+                <label for="repeat_num">Repeat:</label> <input id="repeat_num" name="repeat_num" class="preference" type="text" value="1" />
+                <label for="margin">Margin:</label>
+                <select id="margin" name="margin" class="preference">
+                    <option value="top" selected="selected">Top</option>
+                    <option value="right">Right</option>
+                    <option value="left">Left</option>
+                    <option value="bottom">Bottom</option>
+                    <option value="no">No</option>
+                </select>
+
+                <div id="preview" class="center-block"></div>
+
+                <h2 class="text-center">How To Use</h2>
+                <iframe class="center-block" src="//player.vimeo.com/video/95375018" width="500" height="280" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+                <p id="footer" class="text-right">
+                <a href="index_ja.html">Japanese version</a><br/>
+                Google Chrome is preferred browser for this application.<br/>
+                GIF decode by <a href="https://github.com/buzzfeed/libgif-js">libgif-js</a>.<br/>
+                <a href="http://tai2.net/">Taiju Muto</a> 2014.5.16</p>
+            </div>
+        </div>
+        <div id="printable_area"></div>
+
+        <script src="jquery-2.0.3.min.js"></script>
+        <script src="bootstrap.min.js"></script>
+        <script src="libgif.js"></script>
+        <script src="print_a_gif.js"></script>
+        </script>
+    </body>
+</html>

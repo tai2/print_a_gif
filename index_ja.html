@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>印刷したGIF画像が動くアプリ</title>
+        <link href="bootstrap.min.css" rel="stylesheet">
+        <link href="print_a_gif.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div id="unprintable_area" class="hidden-print center-block">
+                <h1 class="text-center">印刷したGIF画像が動くアプリ</h1>
+
+                <p><a href="https://twitter.com/KingChisaty/status/466104209046130688">印刷したGIF画像が動かなくて困っている人</a>のためのアプリです。</p>
+                <div id="message">
+                    <p id="description">
+                        お持ちのアニメGIFファイルをブラウザにドラッグ&amp;ドロップしてください。
+                    </p>
+                    <p id="succeeded" style="display:none;">
+                        <strong>準備完了。ブラウザから印刷してください。</strong>
+                    </p>
+                </div>
+
+                <label for="column_num">列数:</label> <input id="column_num" name="column_num" class="preference" type="text" value="4" />
+                <label for="repeat_num">繰り返し回数:</label> <input id="repeat_num" name="repeat_num" class="preference" type="text" value="1" />
+                <label for="margin">余白の位置:</label>
+                <select id="margin" name="margin" class="preference">
+                    <option value="top" selected="selected">上</option>
+                    <option value="right">右</option>
+                    <option value="left">左</option>
+                    <option value="bottom">下</option>
+                    <option value="no">なし</option>
+                </select>
+
+                <div id="preview" class="center-block"></div>
+
+                <h2 class="text-center">使い方</h2>
+                <iframe class="center-block" src="//player.vimeo.com/video/95375018" width="500" height="280" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+                <p id="footer" class="text-right">
+                <a href="index.html">英語版</a>。<br/>
+                このページはGoogle Chromeで動作確認しています。<br/>
+                GIF decode by <a href="https://github.com/buzzfeed/libgif-js">libgif-js</a>.<br/>
+                <a href="http://tai2.net/">Taiju Muto</a> 2014.5.16</p>
+            </div>
+            <div id="printable_area"></div>
+        </div>
+
+        <script src="jquery-2.0.3.min.js"></script>
+        <script src="bootstrap.min.js"></script>
+        <script src="libgif.js"></script>
+        <script src="print_a_gif.js"></script>
+        </script>
+    </body>
+</html>
