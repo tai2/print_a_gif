@@ -1,0 +1,13 @@
+{
+  "name": "print_a_gif",
+  "version": "1.0.0",
+  "main": "index.html",
+  "author": "tai2 <hello@tai2.net>",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write . --ignore-path ./.prettierignore"
+  },
+  "dependencies": {
+    "prettier": "^2.4.1"
+  }
+}
