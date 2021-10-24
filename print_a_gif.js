@@ -1,7 +1,7 @@
 ;(function () {
   var dpi = 200
-  var pageWidth = 8.3 * dpi
-  var pageHeight = 11.7 * dpi
+  var pageWidth = 8.268 * dpi // A4 portrait
+  var pageHeight = 11.693 * dpi // A4 portrait
   var margin = 0.78 * dpi
 
   if (!window.File || !window.FileReader || !window.FileList) {
