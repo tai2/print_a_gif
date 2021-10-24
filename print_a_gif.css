@@ -13,7 +13,7 @@ div#preview {
 }
 
 canvas.page {
-  page-break-inside: avoid;
+  break-inside: avoid;
   width: 100%;
 }
 

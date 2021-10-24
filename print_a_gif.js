@@ -82,7 +82,6 @@
     var rowNum = Math.floor(
       (gif.get_length() * repeatNum + columnNum - 1) / columnNum
     )
-    var pageCanvas, pageContext
     var imageWidth = cellWidth - hMargin
     var imageHeight =
       (gif.get_canvas().height * imageWidth) / gif.get_canvas().width
@@ -91,6 +90,12 @@
     var pageNum = Math.floor((rowNum + rowNumInPage - 1) / rowNumInPage)
     var topMargin = $('#margin').val() === 'top' ? margin : 0
     var leftMargin = $('#margin').val() === 'left' ? margin : 0
+    var pageCanvas, pageContext
+
+    console.log('pageNum', pageNum)
+    console.log('canvas size', pageWidth, pageHeight)
+    console.log('image size', imageWidth, imageHeight)
+    console.log('mergin size', hMargin, vMargin)
 
     $('#printable_area').empty()
 
